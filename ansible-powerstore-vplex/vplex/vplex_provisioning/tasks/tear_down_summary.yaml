@@ -1,0 +1,5 @@
+# This task summarizes the provisioning tear down operation
+
+- name: Tear down - Summary Report
+  debug:
+    msg: '{{ storage_volumes_list | get_tear_down_summary_report(extents_list, devices_list, virtual_volumes_list, delete_storage_view_name) }}'

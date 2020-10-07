@@ -1,0 +1,30 @@
+# ummap_volume.yml
+---
+- name: Unmap Volume
+  hosts: localhost
+  connection: local
+  vars_files:
+    - PowerStore-site1.yml
+    
+  vars_prompt:
+    - name: "host"
+      prompt: "Enter a Host Name to Unmap From"
+      - name: "vol_name"
+      prompt: "Enter a Volume Name to Unmap"
+    
+  tasks:
+    - name: Unmap Volume
+      register: result_vol
+      dellemc_powerstore_volume:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        vol_name: "{{ vol_name }}"
+        state: 'present'
+        mapping_state: 'unmapped'
+        host: "{{ host }}"
+        
+    - name: Output The Result
+      debug:
+        msg: "{{ result_vol }}"

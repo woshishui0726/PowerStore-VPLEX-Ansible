@@ -1,0 +1,24 @@
+# This task gets the list of virtual volumes that are associated with the storage view that needs to be deleted.
+
+- name: Get virtual volumes
+  uri:
+    url: '{{ url_rest_base_cluster + url_storage_view + delete_storage_view_name }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: GET
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 200
+    timeout: 100
+  register: get_virtual_volumes_output
+
+- name: Get virtual volumes response
+  debug:
+    msg: '{{ get_virtual_volumes_output }}'
+  when: debug_mode
+
+- name: Set the virtual volumes list
+  set_fact:
+    virtual_volumes_list: '{{ get_virtual_volumes_output | get_virtual_volumes_list() }}'

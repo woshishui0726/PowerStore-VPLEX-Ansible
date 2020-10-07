@@ -1,0 +1,19 @@
+# register.yml
+---
+- name: Register Variables
+  hosts: localhost
+  connection: local
+  vars:
+    array: 
+      - array_name: ps3000t
+        array_ip: '172.20.16.50'
+        user: 'admin'
+        password: 'Noah2407!'
+        verifycert: False 
+   
+  tasks: 
+    - name: Debug Contents
+      debug:
+        msg: "{{ item.0.array_ip }}"
+      with_items: 
+        - "{{ array }}"

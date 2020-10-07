@@ -1,0 +1,19 @@
+# This task gets the version of vplex
+
+- name: Get vplex version
+  uri:
+    url: '{{ url_rest_base + url_get_versions }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: get
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    timeout: 100
+  register: versions
+
+- name: Get vplex version Response
+  debug:
+    msg: '{{ versions }}'
+  when: debug_mode

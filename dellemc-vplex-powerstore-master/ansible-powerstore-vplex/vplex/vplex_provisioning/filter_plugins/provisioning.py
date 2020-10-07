@@ -1,0 +1,157 @@
+#!/usr/bin/python
+# Copyright: (c) 2020, DellEMC
+import json
+
+def get_storage_volumes(json_output):
+    storage_volumes = json_output.get("json")
+    storage_volumes_list = [item.get("name") for item in storage_volumes]
+    storage_volumes_list = json.dumps(storage_volumes_list)
+    print("storage volumes list:" + storage_volumes_list)
+    return storage_volumes_list
+
+def get_create_extent_body(create_extent_body, storage_volume_id):
+    storage_volume_value = create_extent_body.get("storage_volume") + str(storage_volume_id)
+    storage_volume = {"storage_volume": storage_volume_value}
+    create_extent_body.update(storage_volume)
+    return create_extent_body
+
+def get_extents_list(json_output, devices_list):
+    extents_list = []
+    results = json_output.get("json")
+    for result in results:
+        devices = result.get("used_by")
+        for device in devices:           
+            if(device in devices_list):
+                extents_list.append(result.get("name"))
+    extents_list = json.dumps(extents_list)
+    print("extents list:" + extents_list)
+    return extents_list
+
+def get_virtual_volumes_list(json_output):
+    virtual_volumes_list = []
+    results = json_output.get("json").get("virtual_volumes")
+    for result in results:
+        virtual_volumes_list.append(result.get("uri"))
+    virtual_volumes_list = json.dumps(virtual_volumes_list)
+    print("virtual volumes list:" + virtual_volumes_list)
+    return virtual_volumes_list
+
+def get_storage_volumes_list(json_output, devices_list):
+    storage_volumes_list = []
+    results = json_output.get("json")
+    for result in results:
+        devices = result.get("used_by")
+        for device in devices:           
+            if(device in devices_list):
+                storage_volumes_list.append(result.get("storage_volume"))
+    storage_volumes_list = json.dumps(storage_volumes_list)
+    print("storage volumes list:" + storage_volumes_list)
+    return storage_volumes_list
+
+def retrieve_elements_list(json_output, component_name):
+    results = json_output.get("json").get(component_name)
+    elements_list = json.dumps([item[1] for item in results])
+    print(elements_list)
+    return elements_list
+
+def get_elements_list(json_output, component_name):
+    elements_list = []
+    results = json_output.get("results")
+    for result in results:
+        elements_list.append(result.get("json").get(component_name))
+    elements_list = json.dumps(elements_list)
+    print(elements_list)
+    return elements_list
+
+def get_rename_extent_body(rename_extent_body, current_extent_name, create_extent_name, my_idx):
+    value = {"value": create_extent_name + str(my_idx+1)}
+    rename_extent_body.update(value)
+    rename_extent_body_list = [rename_extent_body]
+    return rename_extent_body_list
+
+def get_create_device_body(create_device_body, create_device_name, extent_name, my_idx):
+    name = {"name": create_device_name + str(my_idx + 1)}
+    create_device_body.update(name)
+    primary_leg_value = create_device_body.get("primary_leg") + extent_name
+    primary_leg = {"primary_leg": primary_leg_value}
+    create_device_body.update(primary_leg)
+    return create_device_body
+
+def get_create_virtual_volume_body(create_virtual_volume_body, device_name):
+    device_value = create_virtual_volume_body.get("device") + device_name
+    device = {"device": device_value}
+    create_virtual_volume_body.update(device)
+    return create_virtual_volume_body
+
+def get_rename_virtual_volume_body(rename_virtual_volume_body, current_virtual_volume_name, create_virtual_volume_name, my_idx):
+    value = {"value": create_virtual_volume_name + str(my_idx+1)}
+    rename_virtual_volume_body.update(value)
+    rename_virtual_volume_body_list = [rename_virtual_volume_body]
+    return rename_virtual_volume_body_list
+
+def get_create_storage_view_body(create_storage_view_body, create_storage_view_name):
+    name = {"name": create_storage_view_name}
+    create_storage_view_body.update(name)
+    return create_storage_view_body
+
+def get_add_virtual_volume_body(add_virtual_volume_body, virtual_volume_list):   
+    add_virtual_volume_list = []
+    for x in range(len(virtual_volume_list)):
+        temp = add_virtual_volume_body.copy()
+        value = {"value": temp.get("value") + virtual_volume_list[x]}
+#does not work
+#        value = {"value": temp.get("value") }
+ #       path = {"path": temp.get("path") + str(x)}
+        path = {"path": temp.get("path")}
+        temp.update(value)
+        temp.update(path)
+        add_virtual_volume_list.append(temp)  
+    return add_virtual_volume_list
+
+def get_remove_virtual_volume_body(remove_virtual_volume_body, virtual_volume):
+    value = {"value": virtual_volume}
+    remove_virtual_volume_body.update(value)
+    remove_virtual_volume_list = [remove_virtual_volume_body]
+    return remove_virtual_volume_list
+
+def get_provisioning_summary_report(storage_volumes, extents_list, devices_list, virtual_volume_list, create_storage_view_name):
+    print("Storage Volumes claimed:" + json.dumps(storage_volumes))
+    print("Extents created        :" + json.dumps(extents_list))
+    print("Devices created        :" + json.dumps(devices_list))
+    print("Virtual Volumes created:" + json.dumps(virtual_volume_list))
+#    print("Storage View created   :" + create_storage_view_name)
+    print("Storage View updated   :" + create_storage_view_name)
+    return "Provisioning completed."
+
+def get_tear_down_summary_report(storage_volumes_list, extents_list, devices_list, virtual_volumes_list, delete_storage_view_name):
+    print("Storage View updated     :" + delete_storage_view_name)
+    print("Virtual Volume deleted   :" + json.dumps(virtual_volumes_list))
+    print("Device deleted           :" + json.dumps(devices_list))
+    print("Extents deleted          :" + json.dumps(extents_list))
+    print("Storage Volumes unclaimed:" + json.dumps(storage_volumes_list))
+    return "Tear down provisioning completed."
+
+class FilterModule(object):
+    ''' storage volume url build filters '''
+
+    def filters(self):
+        return {
+            'get_create_extent_body': get_create_extent_body,
+            'get_rename_extent_body': get_rename_extent_body,
+            'get_create_device_body': get_create_device_body,
+            'get_create_virtual_volume_body': get_create_virtual_volume_body,
+            'get_create_storage_view_body': get_create_storage_view_body,
+            'get_add_virtual_volume_body': get_add_virtual_volume_body,
+            'get_rename_virtual_volume_body': get_rename_virtual_volume_body,
+            'get_remove_virtual_volume_body': get_remove_virtual_volume_body,
+            'get_provisioning_summary_report': get_provisioning_summary_report,
+            'get_tear_down_summary_report': get_tear_down_summary_report,
+            'get_elements_list': get_elements_list,
+            'retrieve_elements_list': retrieve_elements_list,
+            'get_extents_list': get_extents_list,
+            'get_storage_volumes_list': get_storage_volumes_list,
+            'get_storage_volumes': get_storage_volumes,
+            'get_virtual_volumes_list': get_virtual_volumes_list,
+        }
+
+        return filters

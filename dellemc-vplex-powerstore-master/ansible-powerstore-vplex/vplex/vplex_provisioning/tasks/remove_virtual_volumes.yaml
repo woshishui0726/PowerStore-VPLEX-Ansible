@@ -1,0 +1,22 @@
+# This task removes all virtual volumes that are associated with the storage view.
+
+- name: Remove virtual volumes in storage view
+  uri:
+    url: '{{ url_rest_base_cluster + url_add_virtual_volume + delete_storage_view_name }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: PATCH
+    body: '{{ remove_virtual_volume_body | get_remove_virtual_volume_body(item) }}'
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 200
+    timeout: 100
+  register: remove_virtual_volume_output
+  with_items: "{{ virtual_volumes_list }}"
+
+- name: Remove virtual volume Response
+  debug:
+    msg: '{{ remove_virtual_volume_output }}'
+  when: debug_mode

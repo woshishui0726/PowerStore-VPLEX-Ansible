@@ -1,0 +1,21 @@
+# delete_volume.yml
+---
+- name: Volume Deletion
+  hosts: localhost
+  connection: local
+  vars_files:
+    - PowerStore-site1.yml
+    
+  vars_prompt:
+    - name: "vol_name"
+      prompt: "Enter a Volume Name to Delete"
+    
+  tasks:
+    - name: Delete a Volume
+      dellemc_powerstore_volume:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        vol_name: "{{ vol_name }}"
+        state: "absent"

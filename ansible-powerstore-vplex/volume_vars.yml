@@ -1,0 +1,5 @@
+vol_name: 'ansible_demo_powerstore_metro01'
+size: 2 
+cap_unit: 'GB'
+host: 'VPLEX01'
+host2: 'Vplex02'

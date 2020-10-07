@@ -1,0 +1,208 @@
+2020-07-29 19:34:50,386 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-29 19:34:50,386 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-29 19:34:50,386 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7fe5910b67a0>
+2020-07-29 19:34:50,493 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-29 19:34:50,493 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-29 19:34:50,905 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-29 19:34:50,905 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-29 19:34:50,905 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-07-29 19:34:51,564 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-29 19:34:51,564 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-29 19:34:51,564 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f7c69d927a0>
+2020-07-29 19:34:51,859 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-29 19:34:51,859 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-29 19:34:53,380 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-29 19:34:53,380 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-29 19:34:53,380 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-07-30 16:23:13,472 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-30 16:23:13,472 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-30 16:23:13,473 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f95cd5fd7a0>
+2020-07-30 16:23:13,580 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-30 16:23:13,581 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-30 16:23:13,967 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-30 16:23:13,968 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-30 16:23:13,968 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-07-30 16:23:14,550 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-30 16:23:14,550 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-30 16:23:14,550 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f9e6aa707a0>
+2020-07-30 16:23:14,684 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-30 16:23:14,684 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-30 16:23:15,280 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-30 16:23:15,280 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-30 16:23:15,280 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-07-31 12:41:55,842 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-31 12:41:55,842 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-31 12:41:55,842 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f01c818a7a0>
+2020-07-31 12:41:55,982 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-31 12:41:55,982 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-31 12:41:56,473 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-31 12:41:56,473 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-31 12:41:56,473 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-07-31 12:41:57,663 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-31 12:41:57,663 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-31 12:41:57,663 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f49541ff7a0>
+2020-07-31 12:41:57,817 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-31 12:41:57,817 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-31 12:41:58,371 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-31 12:41:58,371 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-31 12:41:58,371 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-07-31 13:22:18,160 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-31 13:22:18,160 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-31 13:22:18,160 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f7a5f62c7a0>
+2020-07-31 13:22:18,246 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-31 13:22:18,246 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-31 13:22:18,595 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-31 13:22:18,595 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-31 13:22:18,595 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-07-31 13:22:19,197 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-31 13:22:19,197 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-31 13:22:19,197 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f84b3d197a0>
+2020-07-31 13:22:19,315 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-31 13:22:19,315 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-31 13:22:20,693 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-31 13:22:20,693 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-31 13:22:20,693 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-07-31 13:23:11,665 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-31 13:23:11,665 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-31 13:23:11,665 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f343e6497a0>
+2020-07-31 13:23:11,812 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-31 13:23:11,812 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-31 13:23:11,812 dellemc_powerstore_volume.py INFO : Volume ansible_demo_powerstore_metro01 is already mapped to host VPLEX01
+2020-07-31 13:23:12,213 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-31 13:23:12,213 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-31 13:23:12,214 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f1948b617a0>
+2020-07-31 13:23:12,379 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-31 13:23:12,379 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-31 13:23:12,379 dellemc_powerstore_volume.py INFO : Volume ansible_demo_powerstore_metro01 is already mapped to host Vplex02
+2020-07-31 13:30:12,991 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-31 13:30:12,991 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-31 13:30:12,991 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f0a9d0d77a0>
+2020-07-31 13:30:13,113 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-31 13:30:13,113 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-31 13:30:13,475 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-31 13:30:13,475 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-31 13:30:13,475 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-07-31 13:30:14,049 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-07-31 13:30:14,049 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-07-31 13:30:14,049 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f5bf4fd27a0>
+2020-07-31 13:30:14,163 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-07-31 13:30:14,163 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-07-31 13:30:14,715 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-07-31 13:30:14,715 dellemc_powerstore_volume.py INFO : No change detected
+2020-07-31 13:30:14,715 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-08-15 20:52:09,438 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 20:52:09,438 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 20:52:09,438 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f67a4d8e7a0>
+2020-08-15 20:52:09,574 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-08-15 20:52:09,574 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-08-15 20:52:09,952 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 20:52:09,952 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 20:52:09,952 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-08-15 20:52:10,548 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 20:52:10,548 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 20:52:10,548 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7efc5f4f77a0>
+2020-08-15 20:52:11,007 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-08-15 20:52:11,007 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-08-15 20:52:13,836 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 20:52:13,836 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 20:52:13,836 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-08-15 20:55:46,687 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 20:55:46,687 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 20:55:46,687 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f57ba8e07a0>
+2020-08-15 20:55:46,829 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 20:55:46,830 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 20:55:46,830 dellemc_powerstore_volume.py INFO : Volume ansible_demo_powerstore_metro01 is already mapped to host VPLEX01
+2020-08-15 20:55:47,208 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 20:55:47,208 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 20:55:47,208 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7fd1677097a0>
+2020-08-15 20:55:47,466 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 20:55:47,466 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 20:55:47,466 dellemc_powerstore_volume.py INFO : Volume ansible_demo_powerstore_metro01 is already mapped to host Vplex02
+2020-08-15 22:03:03,562 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 22:03:03,562 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 22:03:03,562 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f9b661837a0>
+2020-08-15 22:03:03,846 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-08-15 22:03:03,846 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-08-15 22:03:04,231 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 22:03:04,231 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 22:03:04,232 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-08-15 22:03:04,945 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 22:03:04,946 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 22:03:04,946 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7fbc8220e7a0>
+2020-08-15 22:03:05,192 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-08-15 22:03:05,192 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-08-15 22:03:08,070 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 22:03:08,070 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 22:03:08,070 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-08-15 22:06:33,383 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 22:06:33,383 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 22:06:33,383 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f79a1ce17a0>
+2020-08-15 22:06:33,508 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 22:06:33,508 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 22:06:33,508 dellemc_powerstore_volume.py INFO : Volume ansible_demo_powerstore_metro01 is already mapped to host VPLEX01
+2020-08-15 22:06:33,872 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 22:06:33,872 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 22:06:33,872 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f5d2ec5e7a0>
+2020-08-15 22:06:34,126 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 22:06:34,126 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 22:06:34,126 dellemc_powerstore_volume.py INFO : Volume ansible_demo_powerstore_metro01 is already mapped to host Vplex02
+2020-08-15 22:18:50,479 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 22:18:50,479 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 22:18:50,479 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7fd5dc1eb7a0>
+2020-08-15 22:18:50,691 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-08-15 22:18:50,691 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-08-15 22:18:51,122 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 22:18:51,122 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 22:18:51,122 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-08-15 22:18:51,687 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 22:18:51,687 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 22:18:51,687 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f3b6b7297a0>
+2020-08-15 22:18:51,823 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-08-15 22:18:51,823 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-08-15 22:18:53,032 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 22:18:53,032 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 22:18:53,032 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-08-15 22:20:24,862 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 22:20:24,862 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 22:20:24,862 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7fcfb06797a0>
+2020-08-15 22:20:25,013 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 22:20:25,013 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 22:20:25,013 dellemc_powerstore_volume.py INFO : Volume ansible_demo_powerstore_metro01 is already mapped to host VPLEX01
+2020-08-15 22:20:25,360 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 22:20:25,360 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 22:20:25,360 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7eff4464c7a0>
+2020-08-15 22:20:25,559 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 22:20:25,559 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 22:20:25,559 dellemc_powerstore_volume.py INFO : Volume ansible_demo_powerstore_metro01 is already mapped to host Vplex02
+2020-08-15 23:30:04,472 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 23:30:04,472 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 23:30:04,472 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f34c67ff7a0>
+2020-08-15 23:30:04,565 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-08-15 23:30:04,565 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-08-15 23:30:04,922 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 23:30:04,923 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 23:30:04,923 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-08-15 23:30:05,479 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-08-15 23:30:05,480 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-08-15 23:30:05,480 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7efc0d41c7a0>
+2020-08-15 23:30:05,601 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-08-15 23:30:05,601 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-08-15 23:30:06,889 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-08-15 23:30:06,889 dellemc_powerstore_volume.py INFO : No change detected
+2020-08-15 23:30:06,889 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None
+2020-09-10 19:50:25,107 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-09-10 19:50:25,107 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-09-10 19:50:25,107 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f6511c347a0>
+2020-09-10 19:50:25,453 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-09-10 19:50:25,453 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-09-10 19:50:26,259 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-09-10 19:50:26,260 dellemc_powerstore_volume.py INFO : No change detected
+2020-09-10 19:50:26,260 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host VPLEX01 with HLU None
+2020-09-10 19:50:27,318 dellemc_powerstore_volume.py INFO : HAS_PY4PS = True , IMPORT_ERROR = 
+2020-09-10 19:50:27,318 dellemc_powerstore_volume.py INFO : IS_SUPPORTED_PY4PS_VERSION = True , VERSION_ERROR = 
+2020-09-10 19:50:27,318 dellemc_powerstore_volume.py INFO : Got Py4Ps instance for provisioning on PowerStore <PyPowerStore.powerstore_conn.PowerStoreConn instance at 0x7f32962827a0>
+2020-09-10 19:50:27,533 dellemc_powerstore_volume.py ERROR : Got error list index out of range while getting details of volume 
+2020-09-10 19:50:27,533 dellemc_powerstore_volume.py INFO : Creating volume ansible_demo_powerstore_metro01 of size 2147483648 with performance policy None, protection_policy None, description None and volume_group None
+2020-09-10 19:50:28,245 dellemc_powerstore_volume.py INFO : Current volume size 2147483648 B is same as 2147483648 B specified
+2020-09-10 19:50:28,245 dellemc_powerstore_volume.py INFO : No change detected
+2020-09-10 19:50:28,245 dellemc_powerstore_volume.py INFO : Mapping volume ansible_demo_powerstore_metro01 to host Vplex02 with HLU None

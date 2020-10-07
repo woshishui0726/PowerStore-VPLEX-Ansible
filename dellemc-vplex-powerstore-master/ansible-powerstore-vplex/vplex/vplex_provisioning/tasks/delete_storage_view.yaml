@@ -1,0 +1,20 @@
+# This task deletes the provided storage view
+
+- name: Delete storage view
+  uri:
+    url: '{{ url_rest_base_cluster + url_storage_view + delete_storage_view_name }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: DELETE
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 204
+    timeout: 100
+  register: delete_storage_view_output
+
+- name: Delete storage view Response
+  debug:
+    msg: '{{ delete_storage_view_output }}'
+  when: debug_mode

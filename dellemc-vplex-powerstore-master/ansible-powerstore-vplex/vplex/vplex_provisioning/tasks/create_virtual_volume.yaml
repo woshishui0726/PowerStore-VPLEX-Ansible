@@ -1,0 +1,26 @@
+# This task creates a virtual volume from provided device
+
+- name: Create virtual volume
+  uri:
+    url: '{{ url_rest_base_cluster + url_create_virtual_volume }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: POST
+    body: '{{ create_virtual_volume_body | get_create_virtual_volume_body(item) }}'
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 201
+    timeout: 100
+  register: create_virtual_volume_output
+  with_items: "{{ devices_list }}"
+
+- name: Create virtual volume response
+  debug:
+    msg: '{{ create_virtual_volume_output }}'
+  when: debug_mode
+
+- name: Set the virtual volumes list
+  set_fact:
+    virtual_volume_list: '{{ create_virtual_volume_output | get_elements_list("name") }}'

@@ -1,0 +1,4 @@
+# This task creates a virtual volume from provided device
+
+- name: Create the distributed volume, add it to CG and export it to specified host
+  script: ./create_dd.sh

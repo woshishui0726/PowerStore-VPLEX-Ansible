@@ -1,0 +1,23 @@
+# map_volume_no_lu.yml
+---
+- name: Volume Mapping whithout Specifying LU Number
+  hosts: localhost
+  connection: local
+  vars_files:
+    - ps3000t.yml
+  tasks:
+    - name: Map a Volume, No LU Specified
+      register: result_vol
+      dellemc_powerstore_volume:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        vol_name: "{{ vol_name }}"
+        state: 'present'
+        mapping_state: 'mapped'
+        host: "{{ host }}"
+        
+    - name: Output The Result
+      debug:
+        msg: "{{ result_vol }}"

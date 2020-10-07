@@ -1,0 +1,21 @@
+# delete_host.yml
+---
+- name: Host Deletion
+  hosts: localhost
+  connection: local
+  vars_files:
+    - PowerStore-site1.yml
+    
+  vars_prompt:
+    - name: "host_name"
+      prompt: "Enter a Host Name to Delete"
+  
+  tasks:
+    - name: Delete a Host
+      dellemc_powerstore_host:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        host_name: "{{ host_name }}"
+        state: 'absent'

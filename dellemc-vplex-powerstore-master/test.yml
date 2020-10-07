@@ -1,0 +1,16 @@
+# test.yml
+---
+- name: Test
+  hosts: localhost
+  connection: local 
+   
+  tasks: 
+    - name: Include Vars
+      include_vars:
+        file: param_values.yml
+        
+    - name: Debug Contents  
+      debug:
+        msg: "{{ item.key }}"
+      loop: "{{ lookup('dict',storage_systems) }}"
+      when: "'ps3000t' in item.key"

@@ -1,0 +1,30 @@
+# This task runs a patch later to rename the extent
+
+- name: Rename extent names
+  uri:
+    url: '{{ url_rest_base_cluster2 + url_create_extent + item }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: PATCH
+    body: '{{ rename_extent_body | get_rename_extent_body(item, create_extent_name, my_idx) }}'
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 200
+    timeout: 100
+  register: rename_extent_output
+  with_items: "{{ extents_list }}"
+  when: create_extent_name | length > 0
+  loop_control:
+    index_var: my_idx
+
+- name: Rename Extent Response
+  debug:
+    msg: '{{ rename_extent_output }}'
+  when: debug_mode and create_extent_name | length > 0
+
+- name: Update the extents list
+  set_fact:
+    extents_list: '{{ rename_extent_output | get_elements_list("name") }}'
+  when: create_extent_name | length > 0

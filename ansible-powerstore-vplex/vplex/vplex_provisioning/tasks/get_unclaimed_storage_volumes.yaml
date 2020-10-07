@@ -1,0 +1,24 @@
+# This task returns a list of LUNs which are available to claim
+
+- name: Get Storage volumes to claim
+  uri:
+    url: '{{ url_rest_base_cluster + url_claim_storage_volume + "?" + url_claim_storage_volume_condition }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: get
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    timeout: 100
+  register: storage_volume_output
+
+- name: Get Storage volumes to claim Response
+  debug:
+    msg: '{{ storage_volume_output }}'
+  when: debug_mode
+
+- name: Set the storage volumes list
+  set_fact:
+          #    storage_volumes: '{{ storage_volume_output | get_storage_volumes() }}'
+    storage_volumes: '{{ storage_volume_output | get_storage_volumes()  }}'

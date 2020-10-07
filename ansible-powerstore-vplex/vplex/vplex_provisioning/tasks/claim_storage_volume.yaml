@@ -1,0 +1,22 @@
+# This task claims a storage volumes from provided LUN ID
+
+- name: Claim storage volume
+  uri:
+      url: '{{ url_rest_base_cluster + url_claim_storage_volume + "/" + item + "/claim" }}'
+      url_username: '{{ rest_user }}'
+      url_password: '{{ rest_password }}'
+      method: POST
+      body: ""
+      force_basic_auth: true
+      validate_certs: false
+      return_content: true
+      body_format: json
+      status_code: 201,200,409
+      timeout: 100
+  register: claim_storage_volume_output
+  with_items: "{{ storage_volumes }}"
+
+- name: Claim Storage Volume Response
+  debug:
+    msg: '{{ claim_storage_volume_output }}'
+  when: debug_mode

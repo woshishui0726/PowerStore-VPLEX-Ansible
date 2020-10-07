@@ -1,0 +1,21 @@
+# This task deletes the provided virtual volumes
+
+- name: Delete virtual volume
+  uri:
+    url: '{{ url_rest_base + item }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: DELETE
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 204
+    timeout: 100
+  register: delete_virtual_volumes_output
+  with_items: "{{ virtual_volumes_list }}"
+
+- name: Delete Virtual Volumes Response
+  debug:
+    msg: '{{ delete_virtual_volumes_output }}'
+  when: debug_mode

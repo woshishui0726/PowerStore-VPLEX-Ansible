@@ -1,0 +1,14 @@
+# test.yml
+---
+- name: Test
+  hosts: localhost
+  connection: local 
+   
+  tasks: 
+    - name: Include Vars
+      include_vars:
+        file: param_values2.yml
+        
+    - name: Debug Contents  
+      debug:
+        msg: "{{ storage_ip }}"

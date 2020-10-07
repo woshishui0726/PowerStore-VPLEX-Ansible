@@ -1,0 +1,21 @@
+ansible-playbook create_host.yml --extra-vars '{"host_name":"ansible-testhost01","os_type":"Windows","initiators":["00:00:00:00:00:00:00:01","00:00:00:00:00:00:00:02"]}'
+
+ansible-playbook create_volume.yml --extra-vars '{"vol_name":"ansible-vol01","size":2,"cap_unit":"GB"}'
+
+ansible-playbook resize_volume.yml --extra-vars '{"vol_name":"ansible-vol01","size":4,"cap_unit":"GB"}'
+
+ansible-playbook map_volume_no_lu.yml --extra-vars '{"vol_name":"ansible-vol01","host":"ansible-testhost01"}'
+
+ansible-playbook unmap_volume.yml --extra-vars '{"vol_name":"ansible-vol01","host":"ansible-testhost01"}'
+
+ansible-playbook delete_volume.yml --extra-vars '{"vol_name":"ansible-vol01"}'
+
+ansible-playbook delete_host.yml --extra-vars '{"host_name":"ansible-testhost01"}'
+
+ansible-playbook create_volume_2sides.yml --extra-vars '{"vol_name":"ansible-vol01","size":2,"cap_unit":"GB"}'
+
+
+
+
+
+

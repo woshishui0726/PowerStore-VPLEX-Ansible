@@ -1,0 +1,28 @@
+# This task creates a device from the provided extent
+
+- name: Create Device
+  uri:
+    url: '{{ url_rest_base_cluster + url_create_device }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: POST
+    body: '{{ create_device_body | get_create_device_body(create_device_name, item, my_idx) }}'
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 201
+    timeout: 100
+  register: create_device_output
+  with_items: "{{ extents_list }}"
+  loop_control:
+    index_var: my_idx
+
+- name: Create Device Response
+  debug:
+    msg: '{{ create_device_output }}'
+  when: debug_mode
+
+- name: Set the devices list
+  set_fact:
+    devices_list: '{{ create_device_output | get_elements_list("name") }}'

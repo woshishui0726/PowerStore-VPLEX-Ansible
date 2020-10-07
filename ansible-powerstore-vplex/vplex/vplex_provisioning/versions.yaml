@@ -1,0 +1,5 @@
+-
+  name: Provisioning
+  hosts: ansible
+  tasks:
+    - include: ./tasks/get_versions.yaml

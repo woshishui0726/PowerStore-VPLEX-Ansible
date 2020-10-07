@@ -1,0 +1,30 @@
+# map_volume_no_lu_2.yml
+---
+- name: Volume Mapping whithout Specifying LU Number
+  hosts: localhost
+  connection: local
+  vars_files:
+    - PowerStore-site2.yml
+    
+  vars_prompt:
+    - name: "host"
+      prompt: "Enter a Host Name"
+    - name: "vol_name"
+      prompt: "Enter a Volume Name to Map"
+    
+  tasks:
+    - name: Map a Volume, No LU Specified
+      register: result_vol
+      dellemc_powerstore_volume:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        vol_name: "{{ vol_name }}"
+        state: 'present'
+        mapping_state: 'mapped'
+        host: "{{ host }}"
+        
+    - name: Output The Result
+      debug:
+        msg: "{{ result_vol }}"

@@ -1,0 +1,38 @@
+# This task rediscovers the backend arrays
+- name: Rediscover backend array on cluster-1
+  uri:
+    url: '{{ url_rest_base_cluster + url_rediscover1 }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: post
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+#    body_format: json
+    status_code: 200
+    timeout: 100
+  register: rediscovered
+
+- name: Get Rediscovered response
+  debug:
+    msg: '{{ rediscovered }}'
+#
+#when: debug_mode
+#
+- name: Rediscover backend array on cluster-2
+  uri:
+    url: '{{ url_rest_base_cluster2 + url_rediscover2 }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: post
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+#    body_format: json
+    status_code: 200
+    timeout: 100
+  register: rediscovered2
+
+- name: Get Rediscovered response
+  debug:
+    msg: '{{ rediscovered2 }}'

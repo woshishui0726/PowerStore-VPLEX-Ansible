@@ -1,0 +1,30 @@
+# This task rename the virtual volumes to storage view
+
+- name: Rename virtual volumes
+  uri:
+    url: '{{ url_rest_base_cluster + url_create_virtual_volume + item }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: PATCH
+    body: '{{ rename_virtual_volume_body | get_rename_virtual_volume_body(item, create_virtual_volume_name, my_idx) }}'
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 200
+    timeout: 100
+  register: add_virtual_volume_output
+  with_items: "{{ virtual_volume_list }}"
+  loop_control:
+    index_var: my_idx
+  when: create_virtual_volume_name | length > 0
+
+- name: Add virtual volume to storage view Response
+  debug:
+    msg: '{{ add_virtual_volume_output }}'
+  when: debug_mode and create_virtual_volume_name | length > 0
+
+- name: Update the virtual volumes list
+  set_fact:
+    virtual_volume_list: '{{ add_virtual_volume_output | get_elements_list("name") }}'
+  when: create_virtual_volume_name | length > 0

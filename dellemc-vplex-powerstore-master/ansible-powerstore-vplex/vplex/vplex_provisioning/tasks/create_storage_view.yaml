@@ -1,0 +1,21 @@
+# This task creates a storage view
+
+- name: Create storage view
+  uri:
+    url: '{{ url_rest_base_cluster + url_storage_view }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: POST
+    body: '{{ create_storage_view_body | get_create_storage_view_body(create_storage_view_name) }}'
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 201
+    timeout: 100
+  register: create_storage_view_output
+
+- name: Create Storage View Response
+  debug:
+    msg: '{{ create_storage_view_output }}'
+  when: debug_mode

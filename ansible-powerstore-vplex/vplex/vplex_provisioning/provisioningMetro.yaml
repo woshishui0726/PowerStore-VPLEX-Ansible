@@ -1,0 +1,19 @@
+-
+  name: Provisioning
+  hosts: ansible
+  tasks:
+    - include: ./tasks/pause.yaml
+    - include: ./tasks/rediscover_arrays.yaml
+    - include: ./tasks/get_unclaimed_storage_volumes.yaml
+    - include: ./tasks/claim_storage_volume.yaml
+    - include: ./tasks/create_extent.yaml
+    - include: ./tasks/rename_extent.yaml
+    - include: ./tasks/create_device.yaml
+    - include: ./tasks/get_unclaimed_storage_volumes2.yaml
+    - include: ./tasks/claim_storage_volume2.yaml
+    - include: ./tasks/create_extent2.yaml
+    - include: ./tasks/rename_extent2.yaml
+    - include: ./tasks/create_device2.yaml
+    - include: ./tasks/create_dd.yaml 
+#    - include: ./tasks/add_distributed_volumes.yaml
+#    - include: ./tasks/provisioning_summary.yaml

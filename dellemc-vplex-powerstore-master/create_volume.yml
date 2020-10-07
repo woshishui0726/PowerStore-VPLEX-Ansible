@@ -1,0 +1,23 @@
+# create_volume.yml
+---
+- name: Volume Creation
+  hosts: localhost
+  connection: local
+  vars_files:
+    - ps3000t.yml
+  tasks:
+    - name: Create a Volume
+      register: result_vol
+      dellemc_powerstore_volume:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        vol_name: "{{ vol_name }}"
+        size: "{{ size}}"
+        cap_unit: "{{ cap_unit}}"
+        state: 'present'
+        
+    - name: Output VOlume Info
+      debug:
+        msg: "{{ result_vol}}"

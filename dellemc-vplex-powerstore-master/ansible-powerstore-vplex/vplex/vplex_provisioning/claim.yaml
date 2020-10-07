@@ -1,0 +1,6 @@
+-
+  name: claim
+  hosts: ansible
+  tasks:
+    - include: ./tasks/get_unclaimed_storage_volumes.yaml
+    - include: ./tasks/claim_storage_volume.yaml

@@ -1,0 +1,12 @@
+# test3.yml
+---
+- name: Test
+  hosts: localhost
+  connection: local
+  vars_files:
+    - param_values3.yml
+   
+  tasks: 
+    - name: Debug Contents  
+      debug:
+        msg: "{{ storage_ip }}"

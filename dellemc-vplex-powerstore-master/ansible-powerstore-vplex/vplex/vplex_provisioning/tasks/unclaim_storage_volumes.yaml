@@ -1,0 +1,22 @@
+# This task unclaims the storage volumes
+
+- name: Unclaim storage volumes
+  uri:
+      url: '{{ url_rest_base + item + "/unclaim" }}'
+      url_username: '{{ rest_user }}'
+      url_password: '{{ rest_password }}'
+      method: POST
+      body: ""
+      force_basic_auth: true
+      validate_certs: false
+      return_content: true
+      body_format: json
+      status_code: 201,200,409
+      timeout: 100
+  register: unclaim_storage_volumes_output
+  with_items: "{{ storage_volumes_list }}"
+
+- name: Unclaim Storage Volumes Response
+  debug:
+    msg: '{{ unclaim_storage_volumes_output }}'
+  when: debug_mode

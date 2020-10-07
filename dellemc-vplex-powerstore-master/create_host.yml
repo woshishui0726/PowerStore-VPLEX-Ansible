@@ -1,0 +1,24 @@
+# create_host.yml
+---
+- name: Host Creation
+  hosts: localhost
+  connection: local
+  vars_files:
+    - ps3000t.yml
+  tasks:
+    - name: Create a Host
+      register: host_info
+      dellemc_powerstore_host:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        host_name: "{{ host_name }}"
+        os_type: "{{ os_type }}"
+        initiators: "{{ initiators }}"
+        state: 'present'
+        initiator_state: 'present-in-host'
+        
+    - name: Output Host Info
+      debug:
+        msg: "{{ host_info}}"

@@ -1,0 +1,25 @@
+# This task gets the list of extents that are associated with the devices.
+
+- name: Get extents
+  uri:
+    url: '{{ url_rest_base_cluster + url_create_extent }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: GET
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 200
+    timeout: 100
+  register: get_extents_output
+
+- name: Get extents response
+  debug:
+    msg: '{{ get_extents_output }}'
+  when: debug_mode
+
+- name: Set the extents and storage volumes list
+  set_fact:
+    extents_list: '{{ get_extents_output | get_extents_list(devices_list) }}'
+    storage_volumes_list: '{{ get_extents_output | get_storage_volumes_list(devices_list) }}'

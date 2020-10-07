@@ -1,0 +1,6 @@
+---
+storage_name: ps3000t
+storage_ip: '172.20.16.50'
+storage_user: 'admin'
+storage_password: 'Noah2407!'
+storage_verifycert: False 

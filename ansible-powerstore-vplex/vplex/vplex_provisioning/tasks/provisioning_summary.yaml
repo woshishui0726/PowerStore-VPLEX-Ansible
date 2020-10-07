@@ -1,0 +1,5 @@
+# This task summarizes the provisioning operation
+
+- name: Provisioning Summary Report
+  debug:
+    msg: '{{ storage_volumes | get_provisioning_summary_report(extents_list, devices_list, virtual_volume_list, create_storage_view_name) }}'

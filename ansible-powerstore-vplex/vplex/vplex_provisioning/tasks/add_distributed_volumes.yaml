@@ -1,0 +1,21 @@
+# This task add a virtual volume to storage view
+
+- name: Add virtual volume to storage view
+  uri:
+    url: '{{ url_rest_base_cluster + url_add_virtual_volume + create_storage_view_name }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: PATCH
+    body: '{{ add_distributed_volume_body | get_add_virtual_volume_body(virtual_volume_list) }}'
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 200
+    timeout: 100
+  register: add_virtual_volumes_output
+
+- name: Add virtual volume to storage view Response
+  debug:
+    msg: '{{ add_virtual_volumes_output }}'
+  when: debug_mode

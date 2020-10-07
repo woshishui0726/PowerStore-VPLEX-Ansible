@@ -1,0 +1,36 @@
+# create_volume_2sides.yml
+---
+- name: Volume Creation
+  hosts: localhost
+  connection: local
+  vars_files:
+    - ps3000t.yml
+    - ps1000x.yml
+  tasks:
+    - name: Create a Volume on Array1 (ps3000t)
+      register: result_vol
+      dellemc_powerstore_volume:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        vol_name: "{{ vol_name }}"
+        size: "{{ size}}"
+        cap_unit: "{{ cap_unit}}"
+        state: 'present'
+        
+    - name: Create a Volume on Array2 (ps1000x)
+      register: result_vol2
+      dellemc_powerstore_volume:
+        array_ip: "{{array2_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        vol_name: "{{ vol_name }}"
+        size: "{{ size}}"
+        cap_unit: "{{ cap_unit}}"
+        state: 'present'
+    
+    - name: Output VOlume Info
+      debug:
+        msg: "{{ result_vol, result_vol2}}"

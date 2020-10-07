@@ -1,0 +1,26 @@
+# This task creates an extent from the provided storage volume
+
+- name: Create extent
+  uri:
+    url: '{{ url_rest_base_cluster + url_create_extent }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: POST
+    body: '{{ create_extent_body | get_create_extent_body(item) }}'
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 201
+    timeout: 100
+  register: create_extent_output
+  with_items: "{{ storage_volumes }}"
+
+- name: Create Extent Response
+  debug:
+    msg: '{{ create_extent_output }}'
+  when: debug_mode
+
+- name: Set the extents list
+  set_fact:
+    extents_list: '{{ create_extent_output | get_elements_list("name") }}'

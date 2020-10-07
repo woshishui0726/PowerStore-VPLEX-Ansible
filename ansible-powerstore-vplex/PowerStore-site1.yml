@@ -1,0 +1,3 @@
+array_name: PowerStore-site1
+array_ip: '172.20.16.50'
+verifycert: False 

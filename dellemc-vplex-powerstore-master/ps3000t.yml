@@ -1,0 +1,5 @@
+array_name: ps3000t
+array_ip: '172.20.16.50'
+user: 'admin'
+password: 'Noah2407!'
+verifycert: False 

@@ -1,0 +1,5 @@
+# This task creates a virtual volume from provided device
+
+- name: Create the distributed volume, add it to CG and export it to specified host
+  changed_when: True
+  script: ./create_dd.sh -i {{vplex_ip}} -u {{rest_user}} -p {{rest_password}} -cg {{cg}} -stv {{storage_view}} -dd {{distributed_device}} -d1 {{device_cluster1_leg1}} -d2 {{device_cluster2_leg2}}

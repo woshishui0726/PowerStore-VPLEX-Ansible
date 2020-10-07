@@ -1,0 +1,42 @@
+#Host Details
+ansible_host: local
+ansible_connection: local
+#Rest Credentials
+rest_user: service
+rest_password: Password123
+#Rest URLs
+url_rest_base: https://172.16.1.100
+url_rest_base_cluster: https://172.16.1.100/vplex/v2/clusters/cluster-1
+url_rest_base_cluster2: https://172.16.1.100/vplex/v2/clusters/cluster-2
+url_get_versions: /vplex/v2/versions
+url_rediscover1: /storage_arrays/DellEMC-PowerStore-49Y9MX2/rediscover
+url_rediscover2: /storage_arrays/DellEMC-PowerStore-49ZBMX2/rediscover
+url_claim_storage_volume: /storage_volumes
+url_claim_storage_volume_condition: use=unclaimed&limit=2&offset=0
+url_create_extent: /extents/
+url_create_device: /devices/
+url_create_virtual_volume: /virtual_volumes/
+url_storage_view: /exports/storage_views/
+url_add_virtual_volume: /exports/storage_views/
+
+#Inputs for VPLEX extent/device/volume names + Storage View 
+debug_mode: true
+create_extent_name: Ansible_extent_VPLEX_2GB_
+create_device_name: Ansible_device_VPLEX_2GB_leg1_
+create_device_name2: Ansible_device_VPLEX_2GB_leg2_
+#Following vars are not used for distributed volume provisioning - see README + task create_dd.yaml/.sh 
+create_virtual_volume_name: device_Ansible_dd_vol
+create_storage_view_name: vcunity02_idm 
+delete_storage_view_name: myHost-storage-view-to-delete
+#Rest Params
+create_extent_body: {"storage_volume":"/vplex/v2/clusters/cluster-1/storage_volumes/"}
+create_extent_body2: {"storage_volume":"/vplex/v2/clusters/cluster-2/storage_volumes/"}
+rename_extent_body: { "op": "replace", "path": "/name", "value": "" }
+create_device_body: {"secondary_legs": [],"geometry": "raid-1","primary_leg": "/vplex/v2/clusters/cluster-1/extents/"}
+create_device_body2: {"secondary_legs": [],"geometry": "raid-1","primary_leg": "/vplex/v2/clusters/cluster-2/extents/"}
+create_virtual_volume_body: {"tier": "1","thin": true,"init": true,"device": "/vplex/v2/clusters/cluster-1/devices/"}
+rename_virtual_volume_body: { "op": "replace", "path": "/name", "value": "" }
+create_storage_view_body: {"initiators":[],"operational_status":"stopped","port_name_enabled_status":[],"ports":[],"virtual_volumes":[],"write_same_16_enabled":true,"xcopy_enabled":true,"name":""}
+add_virtual_volume_body: { "op": "add", "path": "/virtual_volumes/", "value": "/vplex/v2/clusters/cluster-1/virtual_volumes/" }
+add_distributed_volume_body: { "op": "add", "path": "/virtual_volumes/", "value": "/vplex/v2/distributed_storage/distributed_virtual_volumes/" }
+remove_virtual_volume_body: { "op": "remove", "path": "/virtual_volumes/0", "value": "" }

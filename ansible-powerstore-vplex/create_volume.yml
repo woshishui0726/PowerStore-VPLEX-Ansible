@@ -1,0 +1,32 @@
+# create_volume.yml
+---
+- name: Volume Creation
+  hosts: localhost
+  connection: local
+  vars_files:
+    - PowerStore-site1.yml
+    
+  vars_prompt:
+    - name: "vol_name"
+      prompt: "Enter a Volume Name"
+    - name: "cap_unit"
+      prompt: "Enter Capacity Unit - MB | GB | TB"
+    - name: "size"
+      prompt: "Enter Size"
+  
+  tasks:
+    - name: Create a Volume
+      register: result_vol
+      dellemc_powerstore_volume:
+        array_ip: "{{array_ip}}"
+        user: "{{user}}"
+        password: "{{password}}"
+        verifycert: "{{verifycert}}"
+        vol_name: "{{ vol_name }}"
+        size: "{{ size}}"
+        cap_unit: "{{ cap_unit}}"
+        state: 'present'
+        
+    - name: Output Volume Info
+      debug:
+        msg: "{{ result_vol}}"

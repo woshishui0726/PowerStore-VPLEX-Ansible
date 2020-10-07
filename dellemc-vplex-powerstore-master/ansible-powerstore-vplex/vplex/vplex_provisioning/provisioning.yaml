@@ -1,0 +1,14 @@
+-
+  name: Provisioning
+  hosts: ansible
+  tasks:
+    - include: ./tasks/get_unclaimed_storage_volumes.yaml
+    - include: ./tasks/claim_storage_volume.yaml
+    - include: ./tasks/create_extent.yaml
+    - include: ./tasks/rename_extent.yaml
+    - include: ./tasks/create_device.yaml
+    - include: ./tasks/create_virtual_volume.yaml
+    - include: ./tasks/rename_virtual_volume.yaml
+#    - include: ./tasks/create_storage_view.yaml
+    - include: ./tasks/add_virtual_volumes.yaml
+    - include: ./tasks/provisioning_summary.yaml

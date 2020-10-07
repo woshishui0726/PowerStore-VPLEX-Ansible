@@ -1,0 +1,25 @@
+# This task gets the list of devices that are associated with the virtual volumes.
+
+- name: Get devices
+  uri:
+    url: '{{ url_rest_base + item }}'
+    url_username: '{{ rest_user }}'
+    url_password: '{{ rest_password }}'
+    method: GET
+    force_basic_auth: true
+    validate_certs: false
+    return_content: true
+    body_format: json
+    status_code: 200
+    timeout: 100
+  register: get_devices_output
+  with_items: "{{ virtual_volumes_list }}"
+
+- name: Get devices response
+  debug:
+    msg: '{{ get_devices_output }}'
+  when: debug_mode
+
+- name: Set the devices list
+  set_fact:
+    devices_list: '{{ get_devices_output | get_elements_list("supporting_device") }}'
