@@ -1,5 +1,0 @@
--
-  name: Add volume to SV
-  hosts: ansible
-  tasks:
-    - include: ./tasks/add_virtual_volumes.yaml
