@@ -14,7 +14,7 @@ Prereqs:
 - there should not be any unclaimed volume on both VPLEX before running the master playbook (current module will claim all available volumes)
 
 How to run the master playbook ?
-ansible-playbook master_playbook.yaml -i ./vplex/vplex_provisioning/inventory.txt
+ansible-playbook master_playbook.yaml 
 
 
 master_playbook.yaml : combined playbook for both PowerStore and VPLEX ; creates a volume on both PowerStore Site1 and Site2, then present each volume to their local VPLEX, then encapsulate the volume into VPLEX and creates a distributed volume. Finally the VPLEX distributed volume is added to Consistency Group "DistCG1" and exported to Host on VPLEX cluster-1.

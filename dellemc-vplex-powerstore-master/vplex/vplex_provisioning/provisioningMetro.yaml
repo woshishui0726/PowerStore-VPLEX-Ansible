@@ -1,6 +1,8 @@
 -
   name: Provisioning
-  hosts: ansible
+  hosts: localhost
+  vars_files:
+    - host_vars/ansible.yaml
   tasks:
     - include: ./tasks/rediscover_arrays.yaml
     - include: ./tasks/get_unclaimed_storage_volumes.yaml
